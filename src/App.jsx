@@ -1,17 +1,15 @@
 import Header from "./components/layout/Header";
 
-import "/App.css";
+import "../src/styles/App.css";
+import HomePage from "./components/home/HomePage";
+import Footer from "./components/layout/Footer";
+import Layout from "./components/layout/Layout";
 
 function App() {
   return (
-    <div
-      style={{
-        backgroundColor: "#FAF9F6",
-        height: "100vh",
-      }}
-    >
-      <Header />
-    </div>
+    <Layout>
+      <HomePage />
+    </Layout>
   );
 }
 

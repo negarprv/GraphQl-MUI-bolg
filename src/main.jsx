@@ -2,14 +2,18 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
+import { ThemeProvider } from "@mui/material";
+import theme from "../mui/theme.js";
 
 const client = new ApolloClient({
-  uri: "https://api-ca-central-1.hygraph.com/v2/clsvrl0sj0x4m07w3xcista93/master",
+  uri: import.meta.env.VITE_REACT_APP_GRAPHCMS_URI,
   cache: new InMemoryCache(),
 });
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <ApolloProvider client={client}>
-    <App />
+    <ThemeProvider theme={theme}>
+      <App />
+    </ThemeProvider>
   </ApolloProvider>
 );
