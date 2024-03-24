@@ -10,10 +10,10 @@ const Layout = ({ children }) => {
         height: "100vh",
       }}
     >
-      <div style={{ marginTop: "20px" }}>
-        <Header />
-      </div>
-      {children}
+      <Header />
+
+      <div style={{ minHeight: "70vh" }}>{children}</div>
+
       <Footer />
     </div>
   );

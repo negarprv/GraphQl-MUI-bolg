@@ -3,7 +3,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" style={{ paddingBottom: "20px" }}>
       <Typography
         component="p"
         variant="p"

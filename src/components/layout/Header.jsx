@@ -26,7 +26,7 @@ const Header = () => {
   };
 
   return (
-    <Container maxWidth="lg">
+    <Container maxWidth="lg" style={{ paddingTop: "20px" }}>
       <AppBar
         position="static"
         sx={{
