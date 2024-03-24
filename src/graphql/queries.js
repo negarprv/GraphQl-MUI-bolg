@@ -52,3 +52,35 @@ export const GET_AUTHOR_INFO = gql`
     }
   }
 `;
+
+export const GET_BLOG_INFO = gql`
+  query getBlogInfo($slug: String) {
+    post(where: { slug: $slug }) {
+      author {
+        avatar {
+          url
+        }
+        name
+        field
+        slug
+      }
+      content {
+        html
+      }
+      title
+      coverPhoto {
+        url
+      }
+    }
+  }
+`;
+
+export const GET_BLOG_COMMENTS = gql`
+  query getBlogComments($slug: String!) {
+    comments(where: { post: { slug: $slug } }) {
+      name
+      id
+      text
+    }
+  }
+`;

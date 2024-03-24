@@ -7,7 +7,7 @@ const Layout = ({ children }) => {
     <div
       style={{
         backgroundColor: "#FAF9F6",
-        height: "100vh",
+        minHeight: "100vh",
       }}
     >
       <Header />
